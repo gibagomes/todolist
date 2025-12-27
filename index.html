@@ -1,1 +1,30 @@
-
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Minha Lista de Tarefas</title>
+ <!-- Link para o arquivo CSS que estilizará nossa aplicação (será criado posteriormente) -->
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <!-- Cabeçalho Principal da Aplicação, contendo o título -->
+ <header>
+ <h1>Minha Lista de Tarefas</h1>
+ </header>
+ <!-- Container Principal que abrigará todos os elementos da lista de tarefas -->
+ <div class="todo-container">
+ <!-- Área de entrada para o usuário digitar novas tarefas e o botão para adicioná-las -->
+ <div class="task-input-area">
+ <input type="text" id="taskInput" placeholder="Adicione uma nova tarefa...">
+ <button id="addBtn">Adicionar</button>
+ </div>
+ <!-- Lista desordenada onde as tarefas serão exibidas. Começa vazia e será preenchida por JavaScript -->
+ <ul id="taskList">
+ <!-- As tarefas (elementos <li>) serão inseridas aqui dinamicamente via JavaScript -->
+ </ul>
+ </div>
+ <!-- Link para o arquivo JavaScript que adicionará a interatividade à aplicação (será criado posteriormente) -->
+ <script src="script.js"></script>
+</body>
+</html>
