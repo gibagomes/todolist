@@ -1,1 +1,114 @@
-
+/* Estilos globais para o corpo da página */
+body {
+ font-family: 'Arial', sans-serif; /* Define a fonte padrão */
+ background-color: #f4f7f6; /* Cor de fundo suave */
+ display: flex; /* Usa flexbox para centralizar o conteúdo */
+ justify-content: center; /* Centraliza horizontalmente */
+ align-items: center; /* Centraliza verticalmente */
+ min-height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
+ margin: 0; /* Remove margens padrão do body */
+ padding: 20px; /* Adiciona um preenchimento para evitar que o conteúdo encoste nas bordas */
+ box-sizing: border-box; /* Inclui padding e border na largura/altura total */
+}
+/* Estilos para o cabeçalho principal da aplicação */
+header {
+ width: 100%;
+ text-align: center;
+ position: absolute; /* Posicionamento absoluto para o cabeçalho */
+ top: 20px; /* Distância do topo */
+}
+header h1 {
+ color: #333; /* Cor do título */
+ font-size: 2.5em; /* Tamanho da fonte do título */
+ margin: 0;
+}
+/* Container principal da lista de tarefas */
+.todo-container {
+ background-color: #ffffff; /* Fundo branco para o container */
+ padding: 30px; /* Espaçamento interno */
+ border-radius: 10px; /* Cantos arredondados */
+ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+ width: 100%; /* Largura total */
+ max-width: 500px; /* Largura máxima para um design responsivo */
+ margin-top: 80px; /* Espaço para o cabeçalho */
+}
+/* Área de entrada de tarefas e botão */
+.task-input-area {
+ display: flex; /* Usa flexbox para alinhar input e botão */
+ margin-bottom: 25px; /* Espaçamento abaixo da área de entrada */
+ gap: 10px; /* Espaço entre o input e o botão */
+}
+/* Estilos para o campo de input */
+#taskInput {
+ flex-grow: 1; /* Permite que o input preencha o espaço disponível */
+ padding: 12px 15px; /* Espaçamento interno */
+ border: 1px solid #ddd; /* Borda suave */
+ border-radius: 5px; /* Cantos arredondados */
+ font-size: 1em; /* Tamanho da fonte */
+}
+#taskInput:focus {
+ outline: none; /* Remove o contorno padrão ao focar */
+ border-color: #6a0dad; /* Cor da borda ao focar */
+}
+/* Estilos para o botão "Adicionar" */
+#addBtn {
+ background-color: #6a0dad; /* Cor de fundo vibrante */
+ color: white; /* Cor do texto */
+ border: none; /* Remove a borda */
+ padding: 12px 20px; /* Espaçamento interno */
+ border-radius: 5px; /* Cantos arredondados */
+ cursor: pointer; /* Muda o cursor ao passar por cima */
+ font-size: 1em; /* Tamanho da fonte */
+ transition: background-color 0.3s ease; /* Transição suave para o hover */
+}
+#addBtn:hover {
+ background-color: #4a008d; /* Cor mais escura no hover */
+}
+/* Estilos para a lista de tarefas */
+#taskList {
+ list-style-type: none; /* Remove os marcadores de lista padrão */
+ padding: 0; /* Remove o preenchimento padrão */
+ margin-top: 0; /* Remove margem superior padrão */
+}
+/* Estilos para cada item da tarefa */
+#taskList li {
+ background-color: #f9f9f9; /* Fundo mais claro para os itens */
+ margin-bottom: 10px; /* Espaçamento entre os itens */
+ padding: 15px 20px; /* Espaçamento interno */
+ border-radius: 8px; /* Cantos arredondados */
+ display: flex; /* Usa flexbox para alinhar conteúdo e botões */
+ align-items: center; /* Alinha verticalmente os itens */
+ justify-content: space-between; /* Espaça o texto e os botões */
+ font-size: 1.1em; /* Tamanho da fonte do texto da tarefa */
+ color: #444; /* Cor do texto */
+ transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+}
+/* Estilos para tarefas concluídas */
+#taskList li.completed {
+ text-decoration: line-through; /* Risca o texto */
+ color: #999; /* Cor mais clara para o texto */
+ background-color: #e0e0e0; /* Fundo mais escuro para tarefas concluídas */
+ box-shadow: none; /* Remove a sombra */
+}
+/* Estilos para os botões de ação dentro de cada tarefa (checkbox e delete) */
+#taskList li .actions {
+ display: flex;
+ gap: 10px;
+}
+#taskList li input[type="checkbox"] {
+ margin-right: 10px; /* Espaço entre o checkbox e o texto */
+ transform: scale(1.4); /* Aumenta o tamanho do checkbox */
+ cursor: pointer;
+ accent-color: #6a0dad; /* Cor de destaque para o checkbox (para navegadores compatíveis) */
+}
+#taskList li button.delete-btn {
+ background: none; /* Remove fundo do botão */
+ border: none; /* Remove borda */
+ color: #e74c3c; /* Cor vermelha para o ícone de lixeira */
+ font-size: 1.2em; /* Tamanho do ícone */
+ cursor: pointer; /* Muda o cursor */
+ transition: color 0.3s ease; /* Transição suave */
+}
+#taskList li button.delete-btn:hover {
+ color: #c0392b; /* Cor mais escura no hover */
+}
